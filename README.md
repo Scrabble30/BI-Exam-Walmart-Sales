@@ -30,5 +30,5 @@ Can we classify whether a store’s weekly sales will be above or below average?
 H: Weekly sales can be reliably categorized as “high” or “low” using classification models with predictors like fuel price, CPI, unemployment, and holiday flags.
 
 🔹 RQ4 (Descriptive Statistics):
-What are the seasonal patterns and central tendencies in Walmart’s weekly sales over time?
-H: Weekly sales exhibit distinct seasonal trends and variations, with holidays and fuel price spikes corresponding to deviations from mean sales levels.
+What are the distribution patterns (mean, median, range, standard deviation) of weekly sales for holidays vs. non-holidays?
+H: Holiday weeks show significantly higher variance in weekly sales compared to non-holiday weeks.

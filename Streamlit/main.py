@@ -1,10 +1,9 @@
 import streamlit as st
+import statistics
 
 
 def show_homepage():
-    st.image('Images/Walmart.jpg', caption='Wallmart Store in USA', use_column_width=True)
-
-    st.write("")
+    st.image('Images/Walmart3.png', use_column_width=True)
     st.title('Walmart BI Project')
     st.write('Group 6 - Made by: Bekhan, Otto, Victor & Patrick')
 
@@ -66,9 +65,9 @@ def show_homepage():
     <div style="border:0px solid #ccc; color: white; padding: 15px; border-radius: 8px; background-color: #262730;">
         <ul style="margin-top: 0; list-style-type: none; padding-left: 0;">
             <li><strong>RQ4: Descriptive Statistics</strong></li>
-            <li><strong>Question:</strong> What are the seasonal patterns and central tendencies in Walmart’s weekly sales over time?</li>
+            <li><strong>Question:</strong> What are the distribution patterns (mean, median, range, standard deviation) of weekly sales for holidays vs. non-holidays?</li>
             <li>______________________________________________________________________________</li>
-            <li><strong>H:</strong> Weekly sales exhibit distinct seasonal trends and variations, with holidays and fuel price spikes corresponding to deviations from mean sales levels.</li>
+            <li><strong>H:</strong> Holiday weeks show significantly higher variance in weekly sales compared to non-holiday weeks.</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
@@ -97,19 +96,24 @@ def show_homepage():
 def main():
     if 'page' not in st.session_state:
         st.session_state.page = 'home' 
+    st.sidebar.image('Images/Walmart.jpg', caption='Wallmart Store in USA', use_column_width=True)
 
     # Sidebar navigation
     st.sidebar.title("Navigation")
     if st.sidebar.button("🏠 Home Page"):
         st.session_state.page = 'home'
-    if st.sidebar.button("🧹 Data Wrangling"):
+    if st.sidebar.button("Data Wrangling"):
         st.session_state.page = 'wrangling'
+    if st.sidebar.button("Descriptive Statistics"):
+        st.session_state.page = "statistics"
 
     # Conditional display
     if st.session_state.page == 'home':
         show_homepage()
     elif st.session_state.page == 'wrangling':
         st.write("Data Wrangling Page - To be implemented")
+    elif st.session_state.page == 'statistics':
+        statistics.descriptivestatistics()
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 import streamlit as st
-import statistics
+import descriptive_stats
 import linearregression
 import clustering
 import classification
@@ -128,7 +128,7 @@ def main():
     elif st.session_state.page == 'classification':
         classification.classification()
     elif st.session_state.page == 'statistics':
-        statistics.descriptivestatistics()
+        descriptive_stats.descriptivestatistics()
 
 
 if __name__ == "__main__":

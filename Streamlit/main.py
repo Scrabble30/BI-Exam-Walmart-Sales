@@ -1,5 +1,8 @@
 import streamlit as st
 import statistics
+import linearregression
+import clustering
+import classification
 
 
 def show_homepage():
@@ -104,7 +107,13 @@ def main():
         st.session_state.page = 'home'
     if st.sidebar.button("Data Wrangling"):
         st.session_state.page = 'wrangling'
-    if st.sidebar.button("Descriptive Statistics"):
+    if st.sidebar.button("RQ 1 - Linear Regression"):
+        st.session_state.page = 'linearregression'
+    if st.sidebar.button("RQ 2 - Clustering"):
+        st.session_state.page = 'clustering'
+    if st.sidebar.button("RQ 3 - Classification"):
+        st.session_state.page = 'classification'
+    if st.sidebar.button("RQ 4 - Descriptive Statistics"):
         st.session_state.page = "statistics"
 
     # Conditional display
@@ -112,6 +121,12 @@ def main():
         show_homepage()
     elif st.session_state.page == 'wrangling':
         st.write("Data Wrangling Page - To be implemented")
+    elif st.session_state.page == 'linearregression':
+        linearregression.regression()
+    elif st.session_state.page == 'clustering':
+        clustering.clustering()
+    elif st.session_state.page == 'classification':
+        classification.classification()
     elif st.session_state.page == 'statistics':
         statistics.descriptivestatistics()
 

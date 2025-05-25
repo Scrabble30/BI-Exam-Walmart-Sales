@@ -26,7 +26,7 @@ What natural groupings of store sales patterns can be identified?
 H: Clustering stores based on average weekly sales and economic context (fuel price, CPI, unemployment) will reveal distinct store behavior profiles (e.g. "holiday-sensitive stores", "price-sensitive stores").
 
 🔹 RQ3 (Classification):
-Can we classify whether a store’s weekly sales will be above or below average?
+Can we classify whether a given week’s sales (across all stores) will be above or below the average, using only general predictors like fuel price, CPI, unemployment, and holiday flags?
 H: Weekly sales can be reliably categorized as “high” or “low” using classification models with predictors like fuel price, CPI, unemployment, and holiday flags.
 
 🔹 RQ4 (Descriptive Statistics):

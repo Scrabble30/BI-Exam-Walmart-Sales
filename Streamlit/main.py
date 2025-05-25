@@ -3,10 +3,11 @@ import descriptive_stats
 import linearregression
 import clustering
 import classification
+import wrangling
 
 
 def show_homepage():
-    st.image('Images/Walmart3.png', use_column_width=True)
+    st.image('../Images/Walmart3.png', use_column_width=True)
     st.title('Walmart BI Project')
     st.write('Group 6 - Made by: Bekhan, Otto, Victor & Patrick')
 
@@ -99,7 +100,7 @@ def show_homepage():
 def main():
     if 'page' not in st.session_state:
         st.session_state.page = 'home' 
-    st.sidebar.image('Images/Walmart.jpg', caption='Wallmart Store in USA', use_column_width=True)
+    st.sidebar.image('../Images/Walmart.jpg', caption='Wallmart Store in USA', use_column_width=True)
 
     # Sidebar navigation
     st.sidebar.title("Navigation")
@@ -120,7 +121,7 @@ def main():
     if st.session_state.page == 'home':
         show_homepage()
     elif st.session_state.page == 'wrangling':
-        st.write("Data Wrangling Page - To be implemented")
+        wrangling.walmart_cleanup()
     elif st.session_state.page == 'linearregression':
         linearregression.regression()
     elif st.session_state.page == 'clustering':

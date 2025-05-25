@@ -22,7 +22,7 @@ def descriptivestatistics():
     st.write("We are working with the cleaned Walmart Sales dataset where outliers have been removed for better precision.")
 
     # Load data
-    directory = "Data/"
+    directory = "../Data/"
     file_name = "Cleaned-Walmart_Sales.csv"
     df = pd.read_csv(directory + "/" + file_name, parse_dates=['Date'], dayfirst=True)
 
@@ -114,3 +114,4 @@ def descriptivestatistics():
     st.write("Levene’s test for equality of variance yielded a test statistic of 2.6775 and a p-value of 0.1018. Since the p-value is greater than the standard significance level of 0.05, we fail to reject the null hypothesis. This suggests that there is no statistically significant difference in the variance of weekly sales between holiday and non-holiday weeks")
     st.write("Our hypothesis that holiday weeks would show significantly higher variance in sales is not supported by the statistical test.")
     st.write("----")
+

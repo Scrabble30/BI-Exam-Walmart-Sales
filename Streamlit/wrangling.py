@@ -21,7 +21,7 @@ def walmart_cleanup():
     ### Key Steps
 
     1. **Loaded the raw CSV** and dropped rows with missing data.
-    2. **Removed constant columns** (those with a single unique value).
+    2. **Checking constant columns** We looked for constant clumns with a unique value, but there was none.
     3. **Removed outliers** using the IQR method:
         - For each numerical column:
             - Calculated Q1, Q3

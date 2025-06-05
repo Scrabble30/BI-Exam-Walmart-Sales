@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import streamlit as st
 from scipy.stats import iqr, skew, kurtosis, levene
-import statsmodels.api as sm
+
 
 def descriptivestatistics():
     st.title("RQ 4 - Descriptive Statistics")

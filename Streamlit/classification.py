@@ -8,9 +8,6 @@ import seaborn as sns
 
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import (
     classification_report, accuracy_score, confusion_matrix, 
     roc_curve, auc
@@ -395,6 +392,9 @@ def classification():
                 """)
     elif model_choice == "Random Forest":
         st.subheader("Random Forest Classifier")
+        st.write(
+            "We now train a Random Forest classifier and evaluate its performance using accuracy, classification report, confusion matrix, ROC curve, cross-validation, feature importance, and train/test accuracy."
+        )
 
         randomForestClassifier = load_model('../Data/RandomForestClassifier.pkl')
 
@@ -434,6 +434,9 @@ def classification():
         """)
     else:
         st.subheader("Gaussian Naive Bayes Classifier")
+        st.write(
+            "The last model we train and evaluate is the Gaussian Naive Bayes classifier using accuracy, classification report, confusion matrix, ROC curve, cross-validation, feature importance, and train/test accuracy."
+        )
 
         bayes = load_model('../Data/GaussianNB.pkl')
 

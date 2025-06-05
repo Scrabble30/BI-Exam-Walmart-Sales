@@ -4,6 +4,7 @@ import linearregression
 import clustering
 import classification
 import wrangling
+import descriptive_stats_both
 
 
 def show_homepage():
@@ -116,6 +117,8 @@ def main():
         st.session_state.page = 'classification'
     if st.sidebar.button("RQ 4 - Descriptive Statistics"):
         st.session_state.page = "statistics"
+    if st.sidebar.button("RQ 4 - Statistics Combined"):
+        st.session_state.page = "statistics2"
 
     # Conditional display
     if st.session_state.page == 'home':
@@ -130,6 +133,8 @@ def main():
         classification.classification()
     elif st.session_state.page == 'statistics':
         descriptive_stats.descriptivestatistics()
+    elif st.session_state.page == 'statistics2':
+        descriptive_stats_both.main()
 
 
 if __name__ == "__main__":
